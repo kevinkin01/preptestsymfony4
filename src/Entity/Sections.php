@@ -114,5 +114,9 @@ class Sections
 
         return $this;
     }
+    public function __toString()
+    {
+        return (string)$this->getThetitled();
+    }
 
 }
