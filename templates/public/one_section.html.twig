@@ -27,6 +27,9 @@
 {% endblock %}
 
 {% block contenu %}
+    {% if articles is empty %}
+        <h3><small>il n'y pas encore d'article dans cette rubrique</small><a href="{{ path("accueil") }}">retour a l'accueil</a> </h3>
+    {% endif %}
     {% for item in articles %}
         <h2>{{ item.getThetitle }}</h2>
         <h3>

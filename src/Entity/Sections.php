@@ -38,10 +38,10 @@ class Sections
     private $thedesc;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Articles", inversedBy="sectionssections")
-     * @ORM\JoinTable(name="sections_has_articles",
+     *@var \Doctrine\Common\Collections\Collection
+     *@ORM\OrderBy({"idarticles" = "DESC"})
+     *@ORM\ManyToMany(targetEntity="Articles", inversedBy="sectionssections")
+     *@ORM\JoinTable(name="sections_has_articles",
      *   joinColumns={
      *     @ORM\JoinColumn(name="sections_idsections", referencedColumnName="idsections")
      *   },

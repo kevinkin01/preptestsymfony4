@@ -5,6 +5,9 @@
 {% block stitre %}Bienvenue sur notre site d'actualité pour Webdev{% endblock %}
 
 {% block menu %}
+    {% if articles is empty %}
+    <h3><small>il n'y pas encore d'article dans cette rubrique</small><a href="{{ path("accueil") }}">retour a l'accueil</a> </h3>
+    {% endif %}
     <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
             <a class="nav-link" href="{{ path("accueil") }}">Accueil
